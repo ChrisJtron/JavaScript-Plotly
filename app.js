@@ -1,7 +1,7 @@
 var jsonData;
 
 // add values to dropdown menu
-d3.json('/samples.json').then(function(data) {
+d3.json('samples.json').then(function(data) {
     jsonData=data;
     var drops = data.names;     
     var sel = document.getElementById('selDataset');
@@ -20,7 +20,7 @@ d3.json('/samples.json').then(function(data) {
 
 // make function to chart ID in the selection box
 function barChart() {
-    d3.json('/samples.json').then(function(data) {
+    d3.json('samples.json').then(function(data) {
 
         var selection= d3.select('#selDataset');
         var inputValue= selection.property('value');
